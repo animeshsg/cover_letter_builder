@@ -1,0 +1,160 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap" type="text/css" />
+    <title></title>
+    <style>
+        *,
+        *:before,
+        *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 8.5in;
+            height: 11in;
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
+            page-break-after: always;
+            position: relative;
+            width: 8.5in;
+            height: 11in;
+        }
+
+        .page-content {
+            position: absolute;
+            width: 8.125in;
+            height: 10.625in;
+            left: 0.1875in;
+            top: 0.1875in;
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .text {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 110px;
+            font-family: "Arimo", cursive;
+            font-size: 10.8pt;
+            line-height: 14pt;
+            text-align: justify;
+        }
+
+        .date {
+            float: right;
+        }
+
+        .mail {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .content-header {
+            display: block;
+            width: 5.7in;
+            margin: 0 auto;
+            font-weight: 700;
+        }
+
+        #footer {
+            margin-left: 30px;
+            font-size: 0.09in;
+            text-align: left;
+            margin-top: 2.5in;
+            color: #333333;
+        }
+
+        #main-logo {
+            position: absolute;
+            left: 16cm;
+            top: 1.2cm;
+        }
+
+        #main-logo img {
+            width: 5.5cm;
+            height: 1.5cm;
+        }
+
+        /*Table*/
+        #table {
+            display: table;
+            margin: 0 0.2in;
+            width: 7in;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            font-size: 12px;
+        }
+
+        .row {
+            display: table-row;
+        }
+
+        .cell {
+            display: table-cell;
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+            padding-left: 5px;
+            line-height: 22px;
+        }
+
+        .left {
+            font-size: 0.135in;
+            background-color: #595959;
+            font-weight: bold;
+            color: white;
+            width: 35%;
+        }
+
+        .right {
+            font-size: 0.12in;
+            right: 65%;
+        }
+    </style>
+</head>
+
+<body>
+<div class="page">
+    <div class="page-content">
+        <div class="text">
+            <span class="date">Date: {{ date }}</span><br />
+
+            <!-- IMPORTANT: Your actual content should be modified to suit your organization's specific practices and should be reviewed by your legal counsel. -->
+            <span class="credentials">
+                        To, <br />
+                        {{ org }}<br />
+                    </span>
+            <br />
+            <br />
+            <br />
+
+            <span class="content-header">Cover letter for {{ role }} at {{ org }}</span><br />
+
+            Hello,<br />
+            <br />
+            As a seasoned automation engineer and a graduate student in data sciences, I have built my technological skills to include the rare blend of cloud computing with {{ role }}. Now, I look to demonstrate my technical abilities as a {{ role }} Intern at {{ org }} to build robust data ecosystems. 
+            My 3-year stint as a software developer, shaped my vision of “innovation through automation”. An extensive experience in containerization and cloud migration coupled with proficiency in API development, allows me to be an adept Automator. I was responsible for building 15+ APIs, innovating 1 unicorn web product, enabling 10+ migrations to Kubernetes/cloud and reducing 50+ man-days via agile automation.
+            My graduate studies in data analytics add an extra dimension to my proficiency in automation engineering. I come prepared with rigorous statistical and mathematical training from the top AI school of UMass, Amherst. As a research fellow at UMass, I have gained significant experience in R and pythonic frameworks to build data analysis models and visualizations with tableau.
+            With this internship opportunity, I hope to leverage my academic and industry experience to become a proactive problem solver. Thus, I am confident of my vigour and adaptability to succeed in your {{ org }}'s dynamic technological environment.
+            <br />
+
+            Sincerely,<br />
+            <br />
+
+             <br />
+            {{ name }}<br />
+            26 Hallock Street,<br />
+            Apartment #13,Building 4,<br />
+            Amherst, Massachusetts, 01002<br />
+            908 219 2250
+        </div>
+
+        <div id="footer">© 2020 Space Financial Group, Inc. All rights reserved. Space Commercial is a brand name of Space Group, N.A. Member DFEE.</div>
+    </div>
+</div>
+</body>
+</html>
